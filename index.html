@@ -8,19 +8,73 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
+        :root {
+            --yellow: #ffc821;
+            --darkblue: #27263b
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html body {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            background-color: rgb(243, 243, 243);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
         .header {
-            background-color: yellow;
-            padding-top: 0.3px;
-            padding-bottom: 0.3px;
+            background-color: var(--yellow);
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
 
         .container {
             padding-left: 200px;
             padding-right: 200px;
         }
-        .header ul{
+
+        .header ul {
             display: flex;
             gap: 20px;
+        }
+
+        .navbar {
+            background-color: var(--darkblue);
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .navbar .nav_menu {
+            display: flex;
+            color: white;
+            gap: 20px;
+            margin-left: auto;
+            margin-right: 0px;
+        }
+
+        .jumbotron {
+            background-image: url('jumbotron.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 570px;
         }
     </style>
 </head>
@@ -28,12 +82,12 @@
 <body>
     <header class="header">
         <div class="container" style="display: flex;">
-            <ul style="list-style: none; padding:0px">
+            <ul>
                 <li><i class="bi bi-phone"></i> 123456789</li>
                 <li><i class="bi bi-envelope-fill"></i> example@gmail.com</li>
                 <li><i class="bi bi-clock"></i> Senin 1 November 2023 08:00</li>
             </ul>
-            <ul style="list-style: none; padding:0px; margin-left: auto; margin-right: 0;">
+            <ul style="margin-left: auto; margin-right: 0;">
                 <li><i class="bi bi-facebook"></i></li>
                 <li><i class="bi bi-twitter"></i></li>
                 <li><i class="bi bi-youtube"></i></li>
@@ -41,6 +95,27 @@
             </ul>
         </div>
     </header>
+    <nav class="navbar">
+        <div class="container" style="display: flex; align-items: center;">
+            <div>
+                <h1 style="color: var(--yellow); font-size:30px">Entercode</h3>
+                    <div style="color: white; margin-top: -5px;">Lorem, ipsum dolor.</div>
+            </div>
+            <ul class="nav_menu">
+                <li>Home</li>
+                <li>Blog</li>
+                <li>Page</li>
+                <li>Portofolio</li>
+                <li>Component</li>
+                <li><i class="bi bi-search" style="color: var(--yellow);"></i></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="container" style="text-align: center;">
+            <div style="font-size: 30px;">Lorem ipsum dolor sit, amet consectetur</div>
+        </div>
+    </div>
 </body>
 
 </html>
